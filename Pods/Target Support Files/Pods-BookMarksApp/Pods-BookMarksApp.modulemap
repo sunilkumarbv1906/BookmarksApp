@@ -1,0 +1,6 @@
+framework module Pods_BookMarksApp {
+  umbrella header "Pods-BookMarksApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

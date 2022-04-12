@@ -1,0 +1,6 @@
+framework module NotionSwift {
+  umbrella header "NotionSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
