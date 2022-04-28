@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4wa-S9-DuX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="signIn" id="BYZ-38-t0r" customClass="SignInViewController" customModule="BookMarksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iosBG" translatesAutoresizingMaskIntoConstraints="NO" id="oa4-7s-PJZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9A-Kt-odZ">
+                                <rect key="frame" x="61" y="491" width="292" height="69"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GoogleSignInNew" title=""/>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PPS-l1-vuF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparentNotion" translatesAutoresizingMaskIntoConstraints="NO" id="xFK-ow-Bj9">
+                                <rect key="frame" x="114" y="213" width="187" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="qhC-DY-g9W"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xFK-ow-Bj9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="6bC-zM-5Xt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xFK-ow-Bj9" secondAttribute="trailing" constant="113" id="70z-cd-OKz"/>
+                            <constraint firstItem="oa4-7s-PJZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RRn-4b-zlH"/>
+                            <constraint firstItem="t9A-Kt-odZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aZY-OB-MN5"/>
+                            <constraint firstItem="xFK-ow-Bj9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="fjL-6R-OTK"/>
+                            <constraint firstItem="oa4-7s-PJZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-88" id="pdf-kK-CGc"/>
+                            <constraint firstItem="t9A-Kt-odZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="77.5" id="qro-dp-hHe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oa4-7s-PJZ" secondAttribute="trailing" id="yuE-gd-WxB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oa4-7s-PJZ" secondAttribute="bottom" constant="-34" id="zCs-YH-KGV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gGJ-MR-aVm"/>
+                    <connections>
+                        <outlet property="signInBtn" destination="t9A-Kt-odZ" id="xxR-Eq-dsE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="97.767857142857139"/>
+        </scene>
+        <!--Bookmarks Folder ListVC-->
+        <scene sceneID="1VS-zI-vqy">
+            <objects>
+                <viewController storyboardIdentifier="tilesView" id="s06-zK-O9K" customClass="BookmarksFolderListVC" customModule="BookMarksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h7G-SJ-8kg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oms-9x-bLU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-nc-ep2">
+                                <rect key="frame" x="0.0" y="140" width="414" height="678"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xGH-Ye-512">
+                                    <size key="itemSize" width="148" height="148"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="do9-xS-q7M">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3OE-KT-J7y">
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJb-1v-2U2">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xWG-ub-Uwb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+ New Bookmark">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openAddLink" destination="s06-zK-O9K" eventType="touchUpInside" id="ujp-2q-hY5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YW3-Rc-6qm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oms-9x-bLU" firstAttribute="top" secondItem="YW3-Rc-6qm" secondAttribute="top" constant="-140" id="3bN-XR-paV"/>
+                            <constraint firstItem="YW3-Rc-6qm" firstAttribute="bottom" secondItem="kJb-1v-2U2" secondAttribute="bottom" id="4It-RV-W6k"/>
+                            <constraint firstItem="kJb-1v-2U2" firstAttribute="top" secondItem="oms-9x-bLU" secondAttribute="bottom" constant="-78" id="Cli-1d-CTF"/>
+                            <constraint firstItem="T0d-nc-ep2" firstAttribute="leading" secondItem="YW3-Rc-6qm" secondAttribute="leading" id="EBW-6F-6N7"/>
+                            <constraint firstItem="YW3-Rc-6qm" firstAttribute="trailing" secondItem="oms-9x-bLU" secondAttribute="trailing" id="FTv-0L-5g6"/>
+                            <constraint firstItem="YW3-Rc-6qm" firstAttribute="bottom" secondItem="T0d-nc-ep2" secondAttribute="bottom" constant="44" id="NpW-X5-TBr"/>
+                            <constraint firstItem="oms-9x-bLU" firstAttribute="leading" secondItem="YW3-Rc-6qm" secondAttribute="leading" id="U57-Oq-gcy"/>
+                            <constraint firstItem="YW3-Rc-6qm" firstAttribute="trailing" secondItem="kJb-1v-2U2" secondAttribute="trailing" id="o7w-OE-5eO"/>
+                            <constraint firstItem="YW3-Rc-6qm" firstAttribute="trailing" secondItem="T0d-nc-ep2" secondAttribute="trailing" id="qmp-a3-PX4"/>
+                            <constraint firstItem="kJb-1v-2U2" firstAttribute="leading" secondItem="YW3-Rc-6qm" secondAttribute="leading" id="qrh-hD-Kxj"/>
+                            <constraint firstItem="T0d-nc-ep2" firstAttribute="top" secondItem="YW3-Rc-6qm" secondAttribute="top" id="y8j-w7-Rq5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0c6-Yj-hH1"/>
+                    <connections>
+                        <outlet property="bookmarkCollectionView" destination="T0d-nc-ep2" id="uda-Qm-KIY"/>
+                        <segue destination="uc8-7u-GtK" kind="show" identifier="showBookmarksList" id="Vdr-ZW-bqa"/>
+                        <segue destination="Zcg-iL-XF5" kind="show" identifier="showAddLinkFromFolder" id="ZQH-zl-aPC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBM-WF-VLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2547.826086956522" y="97.767857142857139"/>
+        </scene>
+        <!--Bookmarks ListVC-->
+        <scene sceneID="Bpx-oF-CyC">
+            <objects>
+                <viewController id="uc8-7u-GtK" customClass="BookmarksListVC" customModule="BookMarksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vkw-xZ-3zd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9tE-EQ-7ZH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUx-8N-ygf">
+                                <rect key="frame" x="0.0" y="818" width="414" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+ New Bookmark">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openAddLink" destination="uc8-7u-GtK" eventType="touchUpInside" id="ggl-0M-dT5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wxm-iA-EGX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wxm-iA-EGX" firstAttribute="bottom" secondItem="xUx-8N-ygf" secondAttribute="bottom" constant="10" id="Ktr-3d-K5r"/>
+                            <constraint firstItem="9tE-EQ-7ZH" firstAttribute="leading" secondItem="wxm-iA-EGX" secondAttribute="leading" id="SC1-HT-iXV"/>
+                            <constraint firstItem="9tE-EQ-7ZH" firstAttribute="top" secondItem="wxm-iA-EGX" secondAttribute="top" id="h3R-HM-Eia"/>
+                            <constraint firstItem="wxm-iA-EGX" firstAttribute="trailing" secondItem="9tE-EQ-7ZH" secondAttribute="trailing" id="iNH-XD-Cwi"/>
+                            <constraint firstItem="wxm-iA-EGX" firstAttribute="trailing" secondItem="xUx-8N-ygf" secondAttribute="trailing" id="iOy-Ll-sQ0"/>
+                            <constraint firstItem="xUx-8N-ygf" firstAttribute="leading" secondItem="wxm-iA-EGX" secondAttribute="leading" id="ie4-jw-jbK"/>
+                            <constraint firstItem="xUx-8N-ygf" firstAttribute="top" secondItem="9tE-EQ-7ZH" secondAttribute="bottom" constant="5" id="tig-gX-BKw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="cIv-Uo-YGZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="9tE-EQ-7ZH" id="4mj-36-Tis"/>
+                        <segue destination="Zcg-iL-XF5" kind="presentation" identifier="showAddLink" id="oxZ-bW-0cs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B64-Pl-PXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3313" y="-451"/>
+        </scene>
+        <!--New Bookmark-->
+        <scene sceneID="OJV-4k-kEM">
+            <objects>
+                <viewController id="GEy-1v-J4j" customClass="AddLinkVC" customModule="BookMarksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k9L-1a-kjr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type or paste your link!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2MC-RG-KXD">
+                                <rect key="frame" x="20" y="76" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Aou-CP-4Eg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Tag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBm-Bs-DwN">
+                                <rect key="frame" x="20" y="177" width="65.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mjd-zT-Dbn">
+                                <rect key="frame" x="365" y="178.5" width="41" height="15"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="55n-9I-GkO"/>
+                                    <constraint firstAttribute="height" constant="20" id="oXK-i9-Nmh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQK-iQ-1m0">
+                                <rect key="frame" x="20" y="179" width="374" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="selectTagAction" destination="GEy-1v-J4j" eventType="touchUpInside" id="0Hr-d2-An4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f8N-SD-uKG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f8N-SD-uKG" firstAttribute="trailing" secondItem="2MC-RG-KXD" secondAttribute="trailing" constant="20" id="9p3-Na-n3p"/>
+                            <constraint firstItem="NBm-Bs-DwN" firstAttribute="leading" secondItem="2MC-RG-KXD" secondAttribute="leading" id="AEn-aC-crM"/>
+                            <constraint firstItem="HQK-iQ-1m0" firstAttribute="centerY" secondItem="NBm-Bs-DwN" secondAttribute="centerY" id="HYy-4T-63A"/>
+                            <constraint firstItem="NBm-Bs-DwN" firstAttribute="top" secondItem="2MC-RG-KXD" secondAttribute="bottom" constant="41" id="KsM-5V-bdD"/>
+                            <constraint firstItem="HQK-iQ-1m0" firstAttribute="leading" secondItem="2MC-RG-KXD" secondAttribute="leading" id="NNL-XA-t6K"/>
+                            <constraint firstItem="HQK-iQ-1m0" firstAttribute="trailing" secondItem="2MC-RG-KXD" secondAttribute="trailing" id="SUM-HA-gL9"/>
+                            <constraint firstItem="2MC-RG-KXD" firstAttribute="leading" secondItem="f8N-SD-uKG" secondAttribute="leading" constant="20" id="b76-5a-M7v"/>
+                            <constraint firstItem="Mjd-zT-Dbn" firstAttribute="trailing" secondItem="2MC-RG-KXD" secondAttribute="trailing" constant="12" id="d4R-f3-NPS"/>
+                            <constraint firstItem="Mjd-zT-Dbn" firstAttribute="centerY" secondItem="NBm-Bs-DwN" secondAttribute="centerY" id="dLP-Fc-r76"/>
+                            <constraint firstItem="2MC-RG-KXD" firstAttribute="top" secondItem="f8N-SD-uKG" secondAttribute="top" constant="20" id="en7-Qh-sOe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Bookmark" id="bUT-f1-PE5"/>
+                    <connections>
+                        <outlet property="selectTag" destination="NBm-Bs-DwN" id="3Jl-RO-fkt"/>
+                        <outlet property="urlTextField" destination="2MC-RG-KXD" id="KkP-Mj-wDo"/>
+                        <segue destination="HPx-wN-9LM" kind="show" identifier="showSelectTag" id="H9v-qB-FVa"/>
+                        <segue destination="xmx-Tu-XBW" kind="unwind" identifier="toBookmarkList" unwindAction="unwindFromAddLink:" id="F18-Ug-W0P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCh-JP-u5r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xmx-Tu-XBW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5217" y="-135"/>
+        </scene>
+        <!--Bookmarks-->
+        <scene sceneID="KqH-y3-Dgp">
+            <objects>
+                <viewController id="HPx-wN-9LM" customClass="FinalConsentViewController" customModule="BookMarksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dIC-yS-Fte">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-g5-KzZ">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bbT-r7-oRD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Yi-g5-KzZ" firstAttribute="leading" secondItem="bbT-r7-oRD" secondAttribute="leading" id="1Bt-tT-raA"/>
+                            <constraint firstItem="bbT-r7-oRD" firstAttribute="bottom" secondItem="4Yi-g5-KzZ" secondAttribute="bottom" id="E5d-0q-sj9"/>
+                            <constraint firstItem="bbT-r7-oRD" firstAttribute="trailing" secondItem="4Yi-g5-KzZ" secondAttribute="trailing" id="hSP-ou-R2f"/>
+                            <constraint firstItem="4Yi-g5-KzZ" firstAttribute="top" secondItem="bbT-r7-oRD" secondAttribute="top" id="nRE-4R-PDY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="VxB-CE-EMZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Yi-g5-KzZ" id="BW8-Pr-Nxk"/>
+                        <segue destination="6gb-Jv-MoO" kind="unwind" identifier="backToNewBookmark" unwindAction="unwind:" id="IfW-2b-XCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZ2-BN-Nrb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6gb-Jv-MoO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6102.898550724638" y="-135.26785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f32-J7-5M0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eS3-8B-qWO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVf-Mp-gAq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Q5-Kv-Yae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEi-yf-T2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ILl-Yy-ccP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4wa-S9-DuX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qW3-0Y-ISG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s06-zK-O9K" kind="relationship" relationship="rootViewController" id="P3a-0j-4GX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UnN-ou-q1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bh7-ts-Chm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zcg-iL-XF5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eQ1-fF-Mhb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ya0-2g-Rb8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GEy-1v-J4j" kind="relationship" relationship="rootViewController" id="AzR-Ox-mQ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0d-Tq-GYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4268.115942028986" y="-135.26785714285714"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oxZ-bW-0cs"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="GoogleSignInNew" width="380.66665649414062" height="83.333335876464844"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="iosBG" width="126.66666412353516" height="272.66665649414062"/>
+        <image name="transparentNotion" width="120.66666412353516" height="127.33333587646484"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
